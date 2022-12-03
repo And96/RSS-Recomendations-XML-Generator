@@ -20,8 +20,8 @@
          	parser.href = rssLink;
          	//parser.protocol; // => "http:"
          	//parser.hostname; // => "example.com"
-         	let siteLink = parser.hostname;
-         	let iconLink = parser.hostname;
+         	let siteLink = parser.hostname.replace("www.","");
+         	let iconLink = parser.hostname.replace("www.","");
          	
            			document.getElementById("xmlOutput").value= templateXML.replace("#SITELINK#", siteLink).replace("#ICONLINK#", iconLink).replace("#RSSLINK#", rssLink);
          }
